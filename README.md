@@ -42,7 +42,7 @@ After establishing structural consistency and dynamic parsing, the complete busi
 ## 🖥️ Final Interactive Dashboard Preview
 Here is a high-fidelity look at the completed executive business intelligence layout. All metrics dynamically update using cross-filtered channel buttons (`In-store`, `Takeaway`, `Online`):
 
-![Dashboard Preview](dashboard_screenshot.png)
+![Dashboard Preview](Cafe%20Sales%20Dashboard.png)
 
 ---
 
