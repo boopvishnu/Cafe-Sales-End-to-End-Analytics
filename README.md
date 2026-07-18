@@ -1,17 +1,17 @@
-# Cafe Sales End-to-End Data Analytics Project
+# ☕ Cafe Sales End-to-End Data Analytics Project
 
-## Project Overview
+## 📌 Project Overview
 This repository contains an end-to-end Data Analytics project focused on optimizing operations, payment processing, and inventory insights for a Cafe/Bakery business. The project demonstrates a complete real-world data engineering and business intelligence pipeline—moving from a cluttered raw dataset to structured database architecture and dynamic reporting.
 
-## Tech Stack & Tools Used
+## 🛠️ Tech Stack & Tools Used
 - **Excel**: Initial data inspection and metadata evaluation.
 - **Python (Pandas & SQLAlchemy)**: Engineered an automated data extraction and database injection pipeline to seamlessly load Excel (`.xlsx` / `.csv`) data into an SQL server, bypassing standard character-encoding barriers.
-- **MySQL**: Relational database architecture, relational mapping, schema optimization, transactional data cleaning, and advanced analytical querying.
-- **Power BI**: (In-Progress) Executive dashboarding and advanced metric visualizations using DAX.
+- **MySQL**: Relational database architecture, relational mapping, schema optimization, transactional data cleaning, and production table management.
+- **Power BI**: Designed a high-fidelity, interactive Executive Dashboard utilizing DAX measures, native vector UI cards, and dynamic cross-filtering analysis.
 
 ---
 
-## Data Engineering & Troubleshooting Challenges (The Analyst Mindset)
+## 🔍 Data Engineering & Troubleshooting Challenges (The Analyst Mindset)
 During the initialization phase, I encountered and successfully resolved several real-world data quality issues:
 
 ### 1. Handling Missing Categorical Records (`na` values)
@@ -29,17 +29,28 @@ During the initialization phase, I encountered and successfully resolved several
 
 ---
 
-## Initial High-Level Business Insights
-- **Operational Balance**: Total cafe transactions are split almost identically between **Takeaway** (3,022 orders) and **In-store** (3,017 orders), indicating a balanced demand for seating space versus packaging logistics.
-- **Payment Trends**: **Digital Wallets** are the most preferred transaction mechanism (2,291 successful orders), closely outperforming Credit Cards and traditional Cash payments.
-- **Top Moving Ingedients**: Initial aggregations show steady transaction spikes for high-volume beverage products (Coffee, Juice, Tea).
+## 📈 High-Level Business Insights (Updated Phase)
+After establishing structural consistency and dynamic parsing, the complete business dashboard revealed several critical operational trends:
+
+- **The Rise of Digital Channels**: With missing logs accurately cleaned in the database, the newly mapped **Online Orders** segment emerged as the massive driver of cafe logistics, processing **64,025 orders** and completely dominating physical In-store (49,196) and traditional Takeaway (47,736) metrics.
+- **The Symmetrical Payment Ecosystem**: Financial transaction share is divided with remarkable equity (~33% each) across Digital Wallets, Credit Cards, and Cash. This displays a highly diversified and flexible point-of-sale layout for consumers.
+- **Volume & Revenue Champions**: Volumetric analysis indicates that **Cake** (14k+ units) and **Smoothie** (13.4k+ units) are the heaviest moving products, capturing significant profit margins.
+- **High-Yield Ticket Analysis**: While total operational revenue scaled to a strong **$161.0K**, the overall Average Order Value stabilized at a lean **$8.00 per ticket**, indicating a business model sustained by extreme consumer frequency.
+
+---
+
+## 🖥️ Final Interactive Dashboard Preview
+Here is a high-fidelity look at the completed executive business intelligence layout. All metrics dynamically update using cross-filtered channel buttons (`In-store`, `Takeaway`, `Online`):
+
+![Dashboard Preview](dashboard_screenshot.png)
 
 ---
 
 ## 📂 Repository File Guide
-- 📝 "dirty_cafe_sales.csv": The initial unmodified dataset containing structural noise and missing labels.
-- 🐍 "SQL Engine.ipynb": Jupyter Notebook writing Python code to clean string schemas and seamlessly bulk-load records into MySQL.
-- 🗃️ "cafe data.sql": Production-ready SQL scripts containing detailed data validations, structural overrides, and business analytic queries (Window functions, segmentation).
+- 📝 `dirty_cafe_sales.csv`: The initial unmodified dataset containing structural noise and missing labels.
+- 🐍 `SQL Engine.ipynb`: Jupyter Notebook writing Python code to clean string schemas and seamlessly bulk-load records into MySQL.
+- 🗃️ `cafe data.sql`: Production-ready updated SQL scripts containing database setup, missing record overrides, and final database tables management.
 
 ---
-*Next Step: Proceeding to connect this live database schema to Power BI Desktop for dimensional modeling and visual dashboarding! 📊*
+### 🏆 Project Status: Complete & Production-Ready! 🎉
+*The automated pipeline is built, database tables are structured, data cleaning constraints are permanently handled, and the business metrics are officially live in the Power BI dashboard workflow.*
